@@ -89,7 +89,7 @@ void hanoiAnimation() {
 /* * * * * * Test Cases * * * * * */
 
 PROVIDED_TEST("Animate Towers of Hanoi") {
-    hanoiAnimation();
+    // hanoiAnimation();
 }
 
 PROVIDED_TEST("Test correct countZeroSumSubsets against buggyCount") {
@@ -97,5 +97,10 @@ PROVIDED_TEST("Test correct countZeroSumSubsets against buggyCount") {
     EXPECT_EQUAL(countZeroSumSubsets(nums, 0, 0), buggyCount(nums, 0, 0));
 
     nums = {1, 2, 3, -4, -3, 2, 5, 1, 9, -2};
+    EXPECT_EQUAL(countZeroSumSubsets(nums, 0, 0), buggyCount(nums, 0, 0));
+}
+
+STUDENT_TEST("Trigger the bug in the buggyCount program with the smallest input") {
+    Vector<int> nums = {1};
     EXPECT_EQUAL(countZeroSumSubsets(nums, 0, 0), buggyCount(nums, 0, 0));
 }

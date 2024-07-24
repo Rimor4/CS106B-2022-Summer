@@ -99,25 +99,26 @@ A15.
 Backtracking Warmup
 ------
 Q16. What is the value of totalMoves after stepping over the call to moveTower in hanoiAnimation?
-A16. TODO
+A16. 15
 
 Q17. What is the value of the totalMoves variable after stepping over the first recursive sub-call? (In other words, within moveTower just after stepping over the first recursive sub-call to moveTower inside the else statement.)
-A17. TODO
+A17. 7
 
 Q18. After breaking at the base case of moveTower and then choosing Step Out, where do you end up? (What function are you in, and at what line number?) What is the value of the totalMoves variable at this point?
-A18. TODO
+A18. moveTower(2, "left", "middle", "right", 1);    -- line 67
+    totalMoves   1
 
 Q19. What is the smallest possible input that you used to trigger the bug in the program?
-A19. TODO
+A19. nums = {1}
 
 Q20. Identify the one-character error in the code and explain why that one-character bug causes the function to return the output you see when running on the minimal input you listed above. You should be able to specifically account for how the error causes the result to change from “completely correct” to “terribly wrong.”
-A20. TODO
+A20. The '+=' operator is used to update sumSoFar. This action directly modifies the sumSoFar value, and thus affects subsequent right recursive call. 
 
 
 Voting (Please note that this part of A3 is completely optional and will only be considered for extra credit. If you did not submit code for this part of the assignment, Q19 and Q20 will not be considered.)
 ------
 Q21. What is the Big O of computePowerIndex? Include your timing data and explain how it supports your reasoning.
-Q19: TODO
+Q19: O(n * 2^n)
 
 Q22. Use the Big O and timing data to estimate how long it would take to compute the power index for the 51 voting blocks in the U.S. Electoral College.
-A22. TODO
+A22. About Fifty years
